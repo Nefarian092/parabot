@@ -1,10 +1,10 @@
-package Igainz.Isoul;
+package igainz.isoul;
 
 import org.parabot.environment.api.utils.Time;
 import org.parabot.environment.input.Mouse;
 import org.parabot.environment.scripts.framework.Strategy;
 import org.rev317.min.api.methods.Game;
-import Igainz.Igainz;
+import igainz.Igainz;
 
 
 /**
@@ -23,9 +23,9 @@ public class BuySouls implements Strategy {
     public void execute() { //using mouse because actions seem to bug out after a set time
         Igainz.status = "Buying Soul Runes";
         Mouse.getInstance().click(189, 130, false);
-        Time.sleep(200);
+        Time.sleep(200, 400);
         Mouse.getInstance().click(169, 217, true);
-        Time.sleep(500);
+        Time.sleep(500, 700);
 
 
 

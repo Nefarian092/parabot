@@ -1,4 +1,4 @@
-package Igainz.Utilitys;
+package igainz.utilitys;
 
 import javax.imageio.ImageIO;
 import java.awt.*;

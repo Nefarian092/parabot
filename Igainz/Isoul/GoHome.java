@@ -1,7 +1,7 @@
-package Igainz.Isoul;
+package igainz.isoul;
 
-import Igainz.Igainz;
-import Igainz.Utilitys.Area;
+import igainz.Igainz;
+import igainz.utilitys.Area;
 import org.parabot.environment.api.utils.Time;
 import org.parabot.environment.input.Keyboard;
 import org.parabot.environment.scripts.framework.Strategy;
@@ -27,7 +27,7 @@ public class GoHome implements Strategy {
         Igainz.status = "Resetting Location";
 
         Keyboard.getInstance().sendKeys("::home");
-        Time.sleep(6000);
+        Time.sleep(6000, 7000);
     }
 
 }

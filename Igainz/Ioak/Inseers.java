@@ -1,7 +1,7 @@
-package Igainz.Ioak;
+package igainz.ioak;
 
-import Igainz.Igainz;
-import Igainz.Utilitys.Area;
+import igainz.Igainz;
+import igainz.utilitys.Area;
 import org.parabot.environment.api.utils.Time;
 import org.parabot.environment.input.Mouse;
 import org.parabot.environment.scripts.framework.Strategy;
@@ -30,17 +30,17 @@ public class Inseers implements Strategy {
             if (Game.getOpenBackDialogId() != 2492) {
 
                 Mouse.getInstance().click(744, 184, true); //spell tab open
-                Time.sleep(1000);
+                Time.sleep(1000, 1500);
                 Mouse.getInstance().click(616, 335, true); //select skills
-                Time.sleep(1000);
+                Time.sleep(1000, 1300);
             }
 
             if (Game.getOpenBackDialogId() == 2492) {
-                Time.sleep(500);
+                Time.sleep(500, 800);
                 Mouse.getInstance().click(253, 382, true); //select woodcutting
-                Time.sleep(900);
+                Time.sleep(900, 1200);
                 Mouse.getInstance().click(242, 415, true); //select seers
-                Time.sleep(6000);
+                Time.sleep(4000, 6000);
             }
          }
 

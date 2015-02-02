@@ -1,7 +1,7 @@
-package Igainz.Iplank;
+package igainz.iplank;
 
-import Igainz.Igainz;
-import Igainz.Utilitys.Area;
+import igainz.Igainz;
+import igainz.utilitys.Area;
 import org.parabot.environment.api.utils.Time;
 import org.parabot.environment.scripts.framework.Strategy;
 import org.rev317.min.api.methods.Players;
@@ -37,7 +37,7 @@ public class OperatorArea implements Strategy {
         Igainz.status = "Walking To Banking Area";
         if (path != null && !path.hasReached()) {
             path.traverse();
-            Time.sleep(6000);
+            Time.sleep(4000, 6000);
         }
     }
 

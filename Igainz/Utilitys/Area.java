@@ -1,4 +1,4 @@
-package Igainz.Utilitys;
+package igainz.utilitys;
 
 import org.rev317.min.api.wrappers.Tile;
 

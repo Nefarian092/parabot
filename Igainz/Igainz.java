@@ -1,15 +1,15 @@
-package Igainz;
+package igainz;
 
-import Igainz.Ioak.BankLogs;
-import Igainz.Ioak.CutLogs;
-import Igainz.Ioak.Inseers;
-import Igainz.Iplank.BankAndPlank;
-import Igainz.Iplank.GoMarket;
-import Igainz.Iplank.OperatorArea;
-import Igainz.Isoul.BuySouls;
-import Igainz.Isoul.CheckArea;
-import Igainz.Isoul.CheckInterface;
-import Igainz.Isoul.GoHome;
+import igainz.ioak.BankLogs;
+import igainz.ioak.CutLogs;
+import igainz.ioak.Inseers;
+import igainz.iplank.BankAndPlank;
+import igainz.iplank.GoMarket;
+import igainz.iplank.OperatorArea;
+import igainz.isoul.BuySouls;
+import igainz.isoul.CheckArea;
+import igainz.isoul.CheckInterface;
+import igainz.isoul.GoHome;
 import org.parabot.environment.api.interfaces.Paintable;
 import org.parabot.environment.scripts.Category;
 import org.parabot.environment.scripts.Script;
@@ -17,7 +17,7 @@ import org.parabot.environment.scripts.ScriptManifest;
 import org.parabot.environment.scripts.framework.Strategy;
 import org.rev317.min.api.events.MessageEvent;
 import org.rev317.min.api.events.listeners.MessageListener;
-import Igainz.Utilitys.Frame;
+import igainz.utilitys.Frame;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -27,7 +27,7 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 
-@ScriptManifest(author = "Scriptss", category = Category.UTILITY, description = "Makes bank on Ikov", name = "Igainz", servers = { "Ikov" }, version = 1.0)
+@ScriptManifest(author = "Scriptss", category = Category.UTILITY, description = "Makes bank on Ikov", name = "igainz", servers = { "Ikov" }, version = 1.0)
 
 public class Igainz extends Script implements MessageListener, Paintable {
 
@@ -82,7 +82,7 @@ public class Igainz extends Script implements MessageListener, Paintable {
         while (window.isVisible()) {
             sleep(20);
         }
-        //Isoul
+        //isoul
         if (Isoul == 1) {
             strategies.add(new GoHome());
             strategies.add(new CheckArea());
@@ -90,13 +90,13 @@ public class Igainz extends Script implements MessageListener, Paintable {
             strategies.add(new BuySouls());
         }
 
-        //Iplank
+        //iplank
         if (Iplank == 1) {
             strategies.add(new OperatorArea());
             strategies.add(new GoMarket());
             strategies.add(new BankAndPlank());
         }
-        //Ioak
+        //ioak
         if (Ioak == 1) {
             strategies.add(new Inseers());
             strategies.add(new CutLogs());
@@ -152,13 +152,13 @@ public class Igainz extends Script implements MessageListener, Paintable {
 
 
         if (Isoul ==1) {
-        g.drawString("Isoul", 245, 261);
+        g.drawString("isoul", 245, 261);
         }
         if (Ioak ==1) {
-            g.drawString("Ioak", 245, 261);
+            g.drawString("ioak", 245, 261);
         }
         if (Iplank ==1) {
-            g.drawString("Iplank", 245, 261);
+            g.drawString("iplank", 245, 261);
         }
 
         g.drawString("" +runTime(startTime), 241, 281);

@@ -1,7 +1,7 @@
-package Igainz.Iplank;
+package igainz.iplank;
 
-import Igainz.Igainz;
-import Igainz.Utilitys.Area;
+import igainz.Igainz;
+import igainz.utilitys.Area;
 import org.parabot.environment.api.utils.Time;
 import org.parabot.environment.input.Keyboard;
 import org.parabot.environment.scripts.framework.Strategy;
@@ -28,6 +28,6 @@ public class GoMarket implements Strategy {
     public void execute() {
         Igainz.status = "Out Of Bounds";
         Keyboard.getInstance().sendKeys("::market");
-        Time.sleep(6000);
+        Time.sleep(4000, 6000);
     }
   }

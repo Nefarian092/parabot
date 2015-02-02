@@ -1,7 +1,7 @@
-package Igainz.Iplank;
+package igainz.iplank;
 
-import Igainz.Igainz;
-import Igainz.Utilitys.Area;
+import igainz.Igainz;
+import igainz.utilitys.Area;
 import org.parabot.environment.api.utils.Time;
 import org.parabot.environment.scripts.framework.Strategy;
 import org.rev317.min.api.methods.*;
@@ -36,28 +36,28 @@ public class BankAndPlank implements Strategy {
             Igainz.status = "Banking Items";
 
             BankBooth[0].interact(0);
-            Time.sleep(2000);
+            Time.sleep(2000, 4000);
         }
 
         if (Game.getOpenInterfaceId() == 5292) {
-            Time.sleep(600);
+            Time.sleep(600, 800);
             Bank.depositAllExcept(995); //because deposit all doesnt work and coins may be in inv
             Menu.sendAction(431, LOG -1, 0, 5382, 2213, 4);//withdraw all oak logs
-            Time.sleep(500);
+            Time.sleep(500, 700);
             Bank.close();
-            Time.sleep(700);
+            Time.sleep(700, 900);
         }
 
         if (Inventory.getCount(LOG) > 1 && Game.getOpenInterfaceId() != 39000 && Sawmill[0] != null) {
             Igainz.status = "Making Planks";
             Sawmill[0].interact(2);
-            Time.sleep(2000);
+            Time.sleep(2000, 2500);
         }
 
         if (Game.getOpenInterfaceId() == 39000) {
-            Time.sleep(700);
+            Time.sleep(700, 900);
             Menu.sendAction(431, 50, 0, 39008, 1278, 2);//make all
-            Time.sleep(700);
+            Time.sleep(700, 900);
             Menu.sendAction(646, 8778, 1, 39006, 1189, 1);//close interface
 
         }

@@ -1,7 +1,7 @@
-package Igainz.Isoul;
+package igainz.isoul;
 
-import Igainz.Igainz;
-import Igainz.Utilitys.Area;
+import igainz.Igainz;
+import igainz.utilitys.Area;
 import org.parabot.environment.api.utils.Time;
 import org.parabot.environment.scripts.framework.Strategy;
 import org.rev317.min.api.methods.Players;
@@ -35,7 +35,7 @@ public class CheckArea implements Strategy {
 
             if (path != null && !path.hasReached()) {
                 path.traverse();
-                Time.sleep(2000);
+                Time.sleep(2000, 2500);
             }
          }
       }

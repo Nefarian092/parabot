@@ -1,6 +1,6 @@
-package Igainz.Isoul;
+package igainz.isoul;
 
-import Igainz.Igainz;
+import igainz.Igainz;
 import org.parabot.environment.api.utils.Time;
 import org.parabot.environment.scripts.framework.Strategy;
 import org.rev317.min.api.methods.Game;
@@ -30,7 +30,7 @@ public class CheckInterface implements Strategy {
 
     if (Mage[0] != null && Mage[0].distanceTo() < 5) {
      Mage[0].interact(0);
-        Time.sleep(2000);
+        Time.sleep(2000, 3200);
       }
     }
   }

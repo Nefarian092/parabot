@@ -1,6 +1,6 @@
-package Igainz.Utilitys;
+package igainz.utilitys;
 
-import Igainz.Igainz;
+import igainz.Igainz;
 /**
  *
  * @author callum

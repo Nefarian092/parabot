@@ -1,7 +1,7 @@
-package Igainz.Ioak;
+package igainz.ioak;
 
-import Igainz.Igainz;
-import Igainz.Utilitys.Area;
+import igainz.Igainz;
+import igainz.utilitys.Area;
 import org.parabot.environment.api.utils.Time;
 import org.parabot.environment.scripts.framework.Strategy;
 import org.rev317.min.api.methods.*;
@@ -36,7 +36,7 @@ public class CutLogs implements Strategy {
 
             if (getTree!=null && trees.getLocation().distanceTo() < 4) {
                 getTree[0].interact(0);
-                Time.sleep(4000);
+                Time.sleep(4000, 4500);
             }
         }
 
@@ -45,7 +45,7 @@ public class CutLogs implements Strategy {
             if (toPickup.length > 0 && toPickup[0] != null) {
                 Igainz.status = "Picking Up Nest";
                 toPickup[0].interact(2);
-                Time.sleep(1500);
+                Time.sleep(1500, 1800);
             }
 
         }
@@ -53,7 +53,7 @@ public class CutLogs implements Strategy {
         if (!Inventory.isFull() && (!Players.getMyPlayer().getLocation().equals(new Tile(2719,3480)))) {
 
             new Tile(2719, 3480).walkTo();
-            Time.sleep(3000);
+            Time.sleep(3000, 3300);
         }
 
 

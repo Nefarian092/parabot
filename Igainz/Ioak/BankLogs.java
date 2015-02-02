@@ -1,8 +1,8 @@
-package Igainz.Ioak;
+package igainz.ioak;
 
 
-import Igainz.Igainz;
-import Igainz.Utilitys.Area;
+import igainz.Igainz;
+import igainz.utilitys.Area;
 import org.parabot.environment.api.utils.Time;
 import org.parabot.environment.input.Mouse;
 import org.parabot.environment.scripts.framework.Strategy;
@@ -40,7 +40,7 @@ public class BankLogs implements Strategy {
 
             if (!path.hasReached() && path != null) {
             path.traverse();
-            Time.sleep(2000);
+            Time.sleep(2000, 2300);
         }
       }
 
@@ -50,7 +50,7 @@ public class BankLogs implements Strategy {
         && Game.getOpenInterfaceId() != 5292 && BankBooth[0] != null) {
 
                 BankBooth[0].interact(0);
-                Time.sleep(2000);
+                Time.sleep(2000, 2500);
             }
 
 
@@ -60,7 +60,7 @@ public class BankLogs implements Strategy {
 
         if (Game.getOpenInterfaceId() == 5292) {
             Bank.depositAllExcept(1360, 1361, 1359); //deposit all except axe
-            Time.sleep(1000);
+            Time.sleep(1000, 1500);
             Mouse.getInstance().click(487, 27, true); //close bank
         }
 
