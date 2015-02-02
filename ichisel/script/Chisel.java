@@ -16,9 +16,9 @@ import org.rev317.min.api.wrappers.Item;
  */
 public class Chisel implements Strategy {
 
-        int CHISEL = 1756; //dem ints
+        private static int CHISEL = 1756; //dem ints
 
-     int GEM = Main.GEM_ID; //seems neater than using Main.GEM_ID everywhere ?
+     private static int GEM = Main.GEM_ID; //seems neater than using Main.GEM_ID everywhere ?
 
     public boolean activate() { //if true continue to execute
 
