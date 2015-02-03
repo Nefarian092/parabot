@@ -1,6 +1,7 @@
 package powerfletch;
 
 import org.parabot.environment.api.utils.Time;
+import org.parabot.environment.scripts.framework.SleepCondition;
 import org.parabot.environment.scripts.framework.Strategy;
 import org.rev317.min.api.methods.*;
 import org.rev317.min.api.wrappers.Item;
@@ -9,7 +10,7 @@ import org.rev317.min.api.wrappers.SceneObject;
 import java.util.ArrayList;
 
 /**
- * Created by callum on 03/02/15.
+ * Created by callum on 24/01/15.
  */
 public class Banking implements Strategy {
 
@@ -32,9 +33,15 @@ public class Banking implements Strategy {
 
         if (Inventory.getCount(PowerFletch.BOW) >= 27
         && Game.getOpenInterfaceId() != 5292
-        && bankBooth[0] != null) {
+        && bankBooth[0] != null
+        && bankBooth.length >0){
            bankBooth[0].interact(0);
-            Time.sleep(1500, 2300);
+            Time.sleep(new SleepCondition() {
+                @Override
+                public boolean isValid(){
+                    return Game.getOpenInterfaceId() == 5292; //
+                }
+            },7000);
 
         }
 

@@ -6,12 +6,12 @@ import org.parabot.environment.scripts.framework.Strategy;
 import org.rev317.min.api.methods.*;
 
 /**
- * Created by callum on 03/02/15.
+ * Created by callum on 24/01/15.
  */
 public class Cutting implements Strategy {
 
 
-     private static int KNIFE = 947; //capitalised because its a constant (the variable doesn't change)
+     private final int KNIFE = 947; //capitalised because its a constant (the variable doesn't change)
 
     public boolean activate() { //if true continue to execute
 

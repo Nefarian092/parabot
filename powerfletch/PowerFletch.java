@@ -12,8 +12,8 @@ import java.util.ArrayList;
 
 public class PowerFletch extends Script {
 
-public static int BOW = 57; //capitalised because its a constant (the variable doesn't change)
-public static int LOG = 1522; //capitalised because its a constant (the variable doesn't change)
+public final static int BOW = 57; //capitalised because its a constant (the variable doesn't change)
+public final static int LOG = 1522; //capitalised because its a constant (the variable doesn't change)
 
     private final ArrayList<Strategy> strategies = new ArrayList<Strategy>();
 
