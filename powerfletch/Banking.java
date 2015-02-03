@@ -15,21 +15,23 @@ import java.util.ArrayList;
  */
 public class Banking implements Strategy {
 
+   // SceneObject[] bankBooth = SceneObjects.getNearest(2213);
 
+     SceneObject[] bankBooth = SceneObjects.getNearest(2213);
+     SceneObject banks = bankBooth[0];
 
     public boolean activate() { //if true continue to execute
 
-        for(SceneObject n : SceneObjects.getNearest(2213)){
 
-            return n != null && Inventory.getCount(PowerFletch.BOW) >= 27 && n.distanceTo() < 5;
-        }
+            return banks != null
+            && Inventory.getCount(PowerFletch.BOW) >= 27
+            && banks.distanceTo() < 5
+            && bankBooth.length > 0;
 
-        return false;
     }
 
 
     public void execute() { //
-        SceneObject[] bankBooth = SceneObjects.getNearest(2213);
 
         if (Inventory.getCount(PowerFletch.BOW) >= 27
         && Game.getOpenInterfaceId() != 5292
@@ -52,14 +54,6 @@ public class Banking implements Strategy {
 
         }
     }
-
-
-
-
-
-
-
-
 
 
     public static void depositAllExcept(int... itemIDs) {
