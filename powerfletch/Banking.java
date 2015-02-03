@@ -5,6 +5,7 @@ import org.parabot.environment.scripts.framework.SleepCondition;
 import org.parabot.environment.scripts.framework.Strategy;
 import org.rev317.min.api.methods.*;
 import org.rev317.min.api.wrappers.Item;
+import org.rev317.min.api.wrappers.Npc;
 import org.rev317.min.api.wrappers.SceneObject;
 
 import java.util.ArrayList;
@@ -15,13 +16,12 @@ import java.util.ArrayList;
 public class Banking implements Strategy {
 
 
+
     public boolean activate() { //if true continue to execute
 
+        for(SceneObject n : SceneObjects.getNearest(2213)){
 
-        if (Inventory.getCount(PowerFletch.BOW) >= 27) {
-            System.out.println("Banking activated");
-
-            return true;
+            return n != null && Inventory.getCount(PowerFletch.BOW) >= 27 && n.distanceTo() < 5;
         }
 
         return false;

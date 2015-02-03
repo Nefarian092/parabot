@@ -29,7 +29,12 @@ public class Cutting implements Strategy {
 
         if (Inventory.getCount(PowerFletch.LOG) >= 1 && Game.getOpenBackDialogId() != 8880 && Players.getMyPlayer().getAnimation() != 1248) {
             Inventory.combine(PowerFletch.LOG, KNIFE);
-            Time.sleep(2000);
+            Time.sleep(new SleepCondition() {
+                @Override
+                public boolean isValid(){
+                    return Game.getOpenBackDialogId() == 8880; //
+                }
+            },4000);
         }
 
         if (Game.getOpenBackDialogId() == 8880 && Players.getMyPlayer().getAnimation() != 1248) {
