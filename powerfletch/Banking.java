@@ -15,7 +15,7 @@ import java.util.ArrayList;
  */
 public class Banking implements Strategy {
 
-   // SceneObject[] bankBooth = SceneObjects.getNearest(2213);
+   
 
      SceneObject[] bankBooth = SceneObjects.getNearest(2213);
      SceneObject banks = bankBooth[0];
