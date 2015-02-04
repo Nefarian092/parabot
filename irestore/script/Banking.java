@@ -30,6 +30,7 @@ public class Banking implements Strategy {
 
     public void execute() { //
 
+          Skill.HERBLORE.getLevel();
 
         if (Inventory.getCount(Main.ENERGY) < 1 || Inventory.getCount(Main.PAPAYA) < 1 && Game.getOpenInterfaceId() != 5292) {
 
@@ -48,7 +49,20 @@ public class Banking implements Strategy {
 
         if (Game.getOpenInterfaceId() == 5292) {
             Bank.depositAll(); //dont think these work but you could use Menu.sendAction
+            Time.sleep(new SleepCondition() {
+                @Override
+                public boolean isValid(){
+                    return Inventory.isEmpty(); //if the inv is empty deposit all has finished
+                }
+            },2000);
             Bank.withdraw(Main.PAPAYA -1, Main.ENERGY -1, 300); // -1 because the ikov bank item id is -1 to inventory
+            Time.sleep(new SleepCondition() {
+                @Override
+                public boolean isValid(){
+                    return Inventory.getCount(Main.PAPAYA) > 1
+                           && Inventory.getCount(Main.ENERGY) > 1; //if we have the pots withdraw has finished
+                }
+            },2000);
             Bank.close(); //close le bank (could use Menu.sendAction)
 
         }
